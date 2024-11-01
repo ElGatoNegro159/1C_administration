@@ -1,0 +1,26 @@
+<h2 class="ui dividing header">Агент кластера</h2>
+
+<form asp-action="add" class="ui form">
+    
+    <p class="field">
+        <label for="ХешИдентификатора">Хеш идентификатора</label>
+        <input name="ХешИдентификатора" value="@Model?.ХешИдентификатора" readonly="readonly" disabled="disabled"/>
+    </p>
+    <p class="field">
+        <label for="Идентификатор">Идентификатор</label>
+        <input name="Идентификатор" value="@Model?.Идентификатор"/>
+        <!--<input name="Идентификатор" value="@Model?.Идентификатор" readonly="readonly" disabled="disabled"/>-->
+    </p>
+    <p class="field">
+        <label for="СетевоеИмя">Сетевое имя</label>
+        <input name="СетевоеИмя" value="@Model?.СетевоеИмя"/>
+    </p>
+    <p class="field">
+        <label for="Порт">Порт</label>
+        <input name="Порт" value="@Model?.Порт"/>
+    </p>
+    
+    <button type="getInfo" class="ui secondary button">Подключиться</button>
+    <button type="submit" class="ui primary button">Сохранить</button>
+    <button asp-action="index" type="submit" class="ui secondary button">Отмена</button>
+</form>
